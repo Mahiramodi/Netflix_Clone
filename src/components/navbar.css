@@ -1,0 +1,60 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .nav {
+     background-color: black;
+     display: flex;
+     padding: 0.2% 0.7%;
+     justify-content: space-between;
+ }
+ 
+ .avtar {
+     width: 50px;
+     height: 40px;
+ }
+ 
+ .nav .logo {
+     width: 70px;
+     height: 40px;
+ }
+ 
+ .nav img:hover {
+     transform: none;
+ }
+ 
+ .banner {
+     height: 20em;
+     background-position: center;
+ }
+ 
+ .banner img:hover {
+     transform: none;
+ }
+ 
+ .banner .info {
+     width: 40%;
+     display: grid;
+     padding: 3%;
+     color: whitesmoke;
+ }
+ 
+ .banner .info p {
+     margin: 1.5% 0%;
+ }
+ 
+ .banner .info button {
+     width: 5rem;
+     height: 2rem;
+     margin: 1%;
+     background-color: rgb(90, 87, 87);
+     border: none;
+     border-radius: 3%;
+     color: azure;
+ }
+ 
+ .banner .info button:hover {
+     cursor: pointer;
+     border: 1.5px solid azure;
+ }
