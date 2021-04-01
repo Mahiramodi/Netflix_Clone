@@ -31,17 +31,23 @@ const Banner = () => {
   }, []);
 
   const playmovie = (movie) => {
-    if (trailerURL) {
-      setTrailerUrl("");
-    } else {
+    // if (trailerURL) {
+    //   setTrailerUrl("");
+    // } else {
       movieTrailer(movie?.title || "")
         .then((url) => {
           const UrlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(UrlParams.get("v"));
         })
         .catch((err) => console.log("error"));
-    }
+    
   };
+  const pausemovie= ()=>{
+    if(trailerURL)
+    {
+      setTrailerUrl("");
+    }
+  }
 
   return (
     <>
@@ -58,7 +64,7 @@ const Banner = () => {
           <p>{movie.overview}</p>
           <div className="btn">
             <button onClick={() => playmovie(movie)}>Play</button>
-            <button onClick={() => playmovie(movie)}>Pause</button>
+            <button onClick={() => pausemovie()}>Pause</button>
           </div>
         </div>
       </div>
